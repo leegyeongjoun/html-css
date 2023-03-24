@@ -1,0 +1,18 @@
+@charset "utr-8";
+@import url('reset.css');
+
+.container{width: 1440px; height: inherit; margin: 0 auto; background: rgba(0, 0, 0, .8);}
+
+#wrap{border-top: 35px solid blue; width: 100%;}
+#heaer{}
+h1{width: 231px; float: left;}
+#nav{}
+#nav .bg{}
+#nav .menu{}
+#nav .menu > ul{}
+#nav .menu > ul >li{}
+#nav .menu > ul >li > a{}
+
+#nav .menu > ul >li > ul{display: none;}
+#nav .menu > ul >li > ul > li{}
+#nav .menu > ul >li > ul > li > a{}

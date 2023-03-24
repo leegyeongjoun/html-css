@@ -1,0 +1,47 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+#wrap{width: 1200px; height: 400px; margin: 100px auto;}
+.left{width: 800px; height: 400px; float: left; }
+.left-top{width: 100%; height: 90px; border-bottom: 10px solid #fff; background: rgb(231, 173, 2);}
+.left-bottom{width: 100%; height: 300px; background: rgb(19, 62, 230);}
+
+.left-bottom-left{width: 600px; height: 300px; float: left; background: yellow;}
+
+.left-bottom-left-top{width: 100%; height: 90px; border-bottom: 10px solid #fff; background: peachpuff;}
+
+.left-bottom-left-bottom{width: 100%; height: 200px; }
+
+.left-bottom-left-bottom-left{width: 200px; float: left; background: rgb(21, 205, 215); height: 200px;}
+
+.left-bottom-left-bottom-left-top{width: 100%; height: 100px; background: yellow;}
+.left-bottom-left-bottom-left-bottom{width: 100%; height: 100px; background: yellowgreen;}
+
+.left-bottom-left-bottom-center{width: 190px; float: left; border-left: 10px solid #fff; background: rgb(11, 200, 77); height: 200px;}
+
+.left-bottom-left-bottom-right{width: 190px; float: left; border-left: 10px solid #fff; background: rgb(17, 11, 200); height: 200px;}
+
+.left-bottom-right{width: 190px; height: 300px; float: left; background: rgb(131, 38, 38); border-left: 10px solid #fff;}
+
+.right{width: 390px; height: 400px; float: left; border-left: 10px solid #fff; background: pink;}
+
+.right-top{width: 100%; height: 290px; border-bottom: 10px solid #fff;}
+.right-bottom{width: 100%; height: 100px; background: purple;}
+
+/* #wrap{width: 1200px; height: 400px; margin: 0 auto; background: #ddd;}
+.left{width: 800px; height: 400px; background: red; float: left;}
+.right{width: 400px; height: 400px; background: yellow; float: right; overflow: hidden;}
+
+.right .right_top{width: 400px; height: 300px; background:rgb(237, 84, 242); float: right;}
+.right .right_bottom{width: 400px; height: 100px; background: purple; float: right;}
+
+.left .box_top{width: 800px; height: 100px; background: yellow; float: left;}
+
+.left .box_bottom{width: 100%; height: 300px; background: white; float: left;}
+
+.left .box_bottom .box_bottom_left{width: 600px; height: 100px; background: red; float: left;}
+
+.left .box_bottom .box_bottom_left .box_bottom_left_top{width: 200px; height: 200px; background: green; float: left;}
+.left .box_bottom .box_bottom_left .box_bottom_left_center{width: 200px; height: 200px; background: blue; float: left;}
+
+.left .box_bottom .box_bottom_right{width: 200px; height: 300px; background: rgb(237, 84, 242); float: right;}
+.box_top{width: 800px; height: 100px; background: yellow;} */

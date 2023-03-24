@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float에 부모에게float으로 대응하는 방법</title>
+    <link rel="stylesheet" href="./css/style1.css">
+</head>
+<body>
+    <h1>float에 float으로 대응하는 방법</h1>
+    <p>안에있는 내용물의 넓이 만큼 줄어든다는 단점 반응형에 부적합</p>
+    <div id="header">
+        <p>#header{clear:both}</p>
+    </div>
+    <div id="container">
+        <div id="lnb">
+            <p><strong>#lnb{float:left;}</strong></p>
+        </div>
+        <div id="content">
+            <p><strong>#content{float:right;}</strong></p>
+        </div>
+    </div>
+    <div id="footer">
+        <p>#footer{clear:both}</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+@charset "utr-8";
+@import url('reset.css');
+
+.container{width: 1000px; height: inherit; margin: 0 auto; background:rgba(0, 0, 0, .3) }
+
+#wrap{width: 100%; }
+#header{width: 100%; height: 147px; border-bottom: 1px solid #ccc; 
+background: #fff url(../image/bg_headerTop.gif) 0 0 repeat-x} 
+
+#siteMenu > ul{width: 100%; height: 35px; position: relative; }
+#siteMenu > ul >li{float: left; position: absolute; top: 0; left: 120px; background: blue; width: 35px; height: 35px;}
+#siteMenu > ul >li > a > img{width: 35px; height: 35px;}
+
+#siteMenu > ul >li:nth-child(1){ position: absolute; top: 0; left: 825px;}
+#siteMenu > ul >li:nth-child(2){ position: absolute; top: 0; left: 860px;}
+#siteMenu > ul >li:nth-child(3){ position: absolute; top: 0; left: 895px;}
+#siteMenu > ul >li:nth-child(4){ position: absolute; top: 0; left: 930px;}
+#siteMenu > ul >li:nth-child(5){ position: absolute; top: 0; left: 965px;}
+#header h1{width: 231px; height: 82px; float: left; margin-top: 20px;}
+#nav{float: right; }
+/* 그림옆에 와야해서 마진값을 안주기위해 right 
+   높이는 헤더높이주고 line height을 100주면 딱가운데옴 
+   a에 패딩을 주면 밀려남 
+   또는 패딩을 딱 맞게 주면됨*/
+#nav .bg{position: absolute; top: 100px; left: 0; width: 100%; height: 340px; z-index: 1; border-bottom: 3px solid #ccc; display: none;}
+#nav:hover .bg{ display: block;}
+/* 메뉴바가 안보이면 탑을 헤더 높이만큼 준다 */
+#nav .menu > ul >li{float: left; width: 125px; text-align: center;}
+#nav .menu > ul >li > a{display: block; font-size: 1.286em; font-weight: bold; padding: 44px 0; width: 100%;}
+#nav .menu > ul >li:hover > a{color: #0066b3;}
+
+
+
+
+#nav .menu > ul >li > ul{display: none; position: absolute; z-index: 2; text-align: left; border-right: 1px solid #ddd; height: 290px; border-top:1px solid #ddd; }
+#nav .menu > ul >li > ul:nth-child(1) > li{width: 120px;}    
+#nav .menu > ul >li > ul:nth-child(2) > li{width: 115px;}    
+#nav .menu > ul >li > ul:nth-child(3) > li{width: 120px;}    
+#nav .menu > ul >li > ul:nth-child(4) > li{width: 110px;}    
+#nav .menu > ul >li > ul:nth-child(5) > li{width: 115px;}
+#nav .menu > ul >li > ul:nth-child(6) > li{width: 330px;}
+#nav .menu > ul:hover >li > ul{display: block;}
+#nav .menu > ul >li:hover > ul {background: #7dbced;}
+
+#nav .menu > ul >li:first-child > ul{border-left: 1px solid #ddd; height: 290px;}
+/* 높이는 배경만큼 */
+#nav .menu > ul >li > ul > li{line-height: 200%; padding-left: 10px;}
+#nav .menu > ul >li > ul > li > a{letter-spacing: -2px;}

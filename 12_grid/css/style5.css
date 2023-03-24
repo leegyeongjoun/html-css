@@ -1,0 +1,18 @@
+body{padding: 50px;}
+
+
+.container{
+    display: grid;
+     gap: 5px;
+    /* grid-template-columns: repeat(6,1fr); */
+    /* grid-template-columns: repeat(auto-fit, 100px); */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    /* px이 100이 되면 떨러짐 넓이가 크면 비율이 맞다가 50px이 되는 시점에서 떨어진다 */
+    grid-template-rows: repeat(2, 100px);
+    /* repeat 2줄까지는 100px 가지고 넘어가면 원래값 */
+    }
+.container>div{display: flex; justify-content: center; align-items: center; font-size: 2em; color: #ffeead;}
+.container div:nth-child(1n){background: rgb(243, 34, 6);}
+.container div:nth-child(2n){background: rgb(255, 204, 0);}
+.container div:nth-child(3n){background: rgb(244, 232, 7);}
+.container div:nth-child(4n){background: rgb(89, 255, 0);}

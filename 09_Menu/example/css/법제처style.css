@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+body{font-family: 'Noto Sans KR', sans-serif;}
+.container{width: 1280px; height: inherit; background: rgba(0,0,0,.5); margin: 0 auto;}
+
+#header{width: 100%; height: 50px; background: yellow;}
+#nav{width: 100%; position: relative; height: 60px; background: #ddd; border-bottom: 1px solid #555; border-top:1px solid #555; }
+
+.nav-wrap{}
+.nav-wrap > div > ul{}
+.nav-wrap > div > ul > li{width: 200px; height: 100%; float: left; text-align: center;}
+.nav-wrap > div > ul > li:last-child{width: 60px; height: 60px; float: right; background: red;}
+.nav-wrap > div > ul > li > a{font: 19px 'Noto Sans KR', sans-serif; font-weight: bold; display: block; width: 100%; height: 100%; padding: 16px 0; position: relative;}
+.nav-wrap > div > ul > li > a:after{
+    content:"";
+    width: 1px;
+    height: 16px;
+    background: #555;
+    position: absolute;
+    right: 0; 
+    top: 22px;
+}
+.nav-wrap > div > ul > li:nth-child(6) > a:after{width: 0; height: 0}
+.nav-wrap > div > ul > li:last-child > a:after{width: 0; height: 0}
+.nav-wrap > div > ul > li > .width100{display:none; width: 100%; position: absolute; top: 60px; left: 0; background-image: linear-gradient(to right,#4560c2 0,  #4560c2 50%,#fff 0, #fff 50%); height: auto; box-shadow: 0 1px 2px #ccc;}
+.nav-wrap > div > ul > li:hover > .width100{display: block;}
+.nav-wrap > div > ul > li > .width100 > .submenu{width: 1280px; margin: 0 auto; height: auto;   }
+.nav-wrap > div > ul > li > .width100 > .submenu .title{width:200px; height:auto; background: #4560c2; float: left;}
+.nav-wrap > div > ul > li > .width100 > .submenu .title strong{display: block; padding-top: 1.75rem; font-size: 1.4rem; color: #fff}
+.nav-wrap > div > ul > li > .width100 > .submenu .title span{display: block; margin: 1rem 0; width: 90%; line-height: 1.1rem; color: #fff}
+.nav-wrap > div > ul > li > .width100 > .submenu .title img{margin: 1rem 0;}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul{float: left; width: 1080px;}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li{border-bottom: 2px solid #ccc; display: table;}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li:last-child{border:none}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li>a{display: table-cell; width:240px; float: left; background: #ddd; text-align: left; padding: 10px 20px; color: #222; box-sizing: border-box;}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li>.sub-sub{display: table-cell; width: 840px; text-align: left;  color: #222; box-sizing: border-box; vertical-align: middle; background: #fff;}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li>.sub-sub>.lnb-detail{}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li>.sub-sub>.lnb-detail .lnb-detail-item{width: 33.333%; float: left; padding-left: 30px; box-sizing: border-box;}
+.nav-wrap > div > ul > li > .width100 > .submenu >ul>li>.sub-sub>.lnb-detail .lnb-detail-item a{}

@@ -1,0 +1,151 @@
+@charset "utf-8";
+body{background: #eee;}
+#wrap{width: 1000px; padding: 20px; margin: 50px auto;}
+.box{background: #fff; padding: 20px; margin-bottom: 10px;}
+
+$white:#fff;
+$gray:#ddd;
+$blue:rgb(9, 104, 221);
+$red:red;
+//폰트의 위계
+$h1:36px;
+$h2:24px;
+$h3:18px;
+$h4:16px;
+$h6:12px;
+$p:14px;
+
+@mixin mix() {
+    border-radius: 5px;
+    border: none;
+    background: $gray;
+    color: $white;
+    padding: 20px;
+}
+@mixin clearfix(){
+    &:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+}
+
+.btn1{
+    display: block;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background: $red;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.btn2{
+    display: block;
+    width: 200px;
+    height: 100px;
+    line-height: 100px;
+    background: $blue;
+    color: $white;
+    border: none;
+    border-radius: 5px;
+    &:hover{background: $gray;}
+}
+.sass{color: $blue;
+    ul{background-color: $red; list-style: none; padding: 20px;
+        li{ height: 30px; margin-bottom: 5px; padding: 5px;
+            background-color: $gray;
+            a{text-decoration: none; 
+                color: $white;
+                &:hover{color: $blue;}
+                &.test{font-size: 13px;}
+            }
+            // .test{}
+            button{
+                @include mix();
+            }
+            &:nth-child(1){border: 1px solid $white;}
+        }   
+    }
+}
+
+
+.mixin1{
+    button{
+        @include mix();
+        margin-bottom: 10px; 
+       }
+}
+
+.mixin2{
+    button{
+        @include mix() 
+       }
+}
+.mixin4{
+    background: yellow; padding: 20px;
+    ul{
+        background: red;
+        @include clearfix();
+        li{list-style: none;
+            height: 30px;
+            float: left;
+            a{text-decoration: none;}
+        }
+        }
+}
+// 매개변수 여러개 가능
+@mixin border($w, $s, $c) {
+    border: $w $s $c;
+}
+
+.parameter{
+    line-height: 200%;
+    .parameter1{
+        @include border(2px, dashed, $red);
+        margin-bottom: 10px;
+    }
+    .parameter2{
+        @include border(2px, dashed, $blue);
+        margin-bottom: 10px;
+    }
+}
+
+$st:string1;
+
+.#{$st}{border:1px solid #ddd;}
+.list li{background: no-repeat 0 center/20px 20px; line-height: 30px; text-indent: 30px;}
+
+@for $index from 1 to 6 {
+    .list li.ico#{$index}
+    {background-image: url(../img/ico#{$index}.svg);
+    &:hover{background-image: url(../img/ico#{$index}_on.svg);}
+    }
+}
+
+@each $var in book, zoom, new {
+    .ico_#{$var}{
+        background: url(../img/#{$var}.svg) no-repeat;
+        text-indent: 80px;
+    }
+}
+
+@mixin btn_radius($h, $radius:true) {
+    padding: 0 20px;
+    height: $h;
+    line-height: $h;
+    text-align: center;
+    background: orange;
+    color: $white;
+    @if $radius{
+        border-radius: $h/2;
+    }@else{
+        border: 2px solid green;
+    }
+}
+.btn{
+    @include btn_radius(100px, $radius:true)
+}

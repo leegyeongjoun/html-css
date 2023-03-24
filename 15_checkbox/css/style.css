@@ -1,0 +1,54 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+
+/* #wrap{width: 1440px; height: 1080px; background: white;}
+#wrap #header{width: 1000px; height: 180px; background: blue;  margin: 0 auto;}
+#wrap #header nav{width: 100%; height: 180px; background: rgb(239, 97, 121); margin: 0 auto;}
+#wrap #header nav ul{overflow: hidden; width: 100%; height: 180px; margin: 0 auto;}
+#wrap #header nav ul li{float: left; margin: 80px 50px;}
+#wrap #header nav ul li:last-child{float: right; margin: 0; width: 190px; height: 200px;}
+#wrap #header nav ul li a{display: block; color: white; font-size: 18px; font-weight: bold; }
+#wrap #section{width: 1000px; height: 700px; background: red; margin: 0 auto; color: black; font-weight: 30px;}
+#wrap #section .tit{width: 1000px; height: 100px; background: yellow; font-size: 30px; font-weight: bold; padding: 25px 0; box-sizing: border-box;}
+#wrap #section #article{width: 700px; height: 700px; background: white; float: left;}
+#wrap #section #article div{width: 340px; height: 300px; color: black; float: left; margin-right: 8px; margin-bottom: 8px;}
+#wrap #section #article .box1{border: 1px solid #ddd;}
+#wrap #section #article .box1 input{}
+#wrap #section #article .box1 label{font-size: 20px; font-weight: bold;}
+#wrap #section #article .box2{border: 1px solid #ddd;}
+#wrap #section #article .box2 input{}
+#wrap #section #article .box2 label{font-size: 20px; font-weight: bold;}
+#wrap #section #article .box3{border: 1px solid #ddd;}
+#wrap #section #article .box3 input{}
+#wrap #section #article .box3 label{font-size: 20px; font-weight: bold;}
+#wrap #section #article .box4{border: 1px solid #ddd;}
+#wrap #section #article .box4 input{}
+#wrap #section #article .box4 label{font-size: 20px; font-weight: bold;}
+#wrap #section #aside{width: 300px; height: 700px; background: blue; float: left;}
+#footer{clear: both; width: 1000px; height: 100px; background: gray; margin: 0 auto;} */
+
+#wrap{width: 800px; margin: 0 auto;}
+header{width: 100%; height: 150px; background: #f46075 url(../img/nav2.png) no-repeat right center;}
+nav{margin-top: 65px; float:left;}
+/* 떠있어야지만 밀어낼 수 있다. */
+nav ul{list-style: none;}
+nav ul li{display: inline; font-weight: bold; margin: 15px;}
+nav ul li a{text-decoration: none; color: white;}
+main{width: 100%; height: auto; background: #ddd;  overflow: hidden;}
+section{width: 580px; float: left; box-sizing: border-box; padding: 20px;}
+section h2{margin-bottom: 20px;}
+section article{width: 48%; height: 220px; float: left; margin: 0 1%; padding: 10px; border: 1px solid #ccc; box-sizing: border-box; overflow: hidden; overflow-y: scroll; transition: .5s;}
+section input[type="checkbox"]:checked ~ .check{height: 0;}
+/* 동일 선택자는 ~로 선택한다. */
+section .at1:hover{border: 1px solid green; background: greenyellow;}
+section .at2:hover{border: 1px solid blue; background: rgb(146, 176, 240);}
+section .at3:hover{border: 1px solid purple; background: rgb(233, 88, 194);}
+section .at4:hover{border: 1px solid pink; background: rgb(184, 116, 173);}
+/* 타입이 체크박스인 친구들만 속성을 선택할 때 대괄호 */
+section h3{display: inline; font-size: 1em;}
+section .check{width: 230px; height: 220px; transition: 1s; overflow: hidden; margin-top: 10px;}
+section .check p{line-height: 1.5; font-size: 14.5px;}
+aside{width: 200px; float: right; margin-top: 66px;}
+aside img{display: block;}
+footer{width: 100%; background: #ccc; clear: both;}
+footer address{text-align: center; padding: 50px 0; color: white; font-style: normal;}

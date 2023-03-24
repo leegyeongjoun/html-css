@@ -1,0 +1,29 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+/* #wrap{width: 1000px; height: 300px; margin: 0 auto; background: red; position: relative;}
+
+.box1{position: absolute; top: 0; right:10px;  }
+.box1 ul{list-style: none;}
+.box1 ul li{float: left; padding-right: 10px; color: blue; font-weight: bold;}
+
+.box2{position: absolute; bottom: 0; right: 0;}
+.box2 ul{list-style: none; }
+.box2 ul li{float: left; color: blue;} */
+
+ul{list-style: none;}
+a{text-decoration: none;}
+#mainheader{width: 1000px; height: 200px; background: skyblue; margin: 0 auto; position: relative;}
+#title{text-align: center; }
+#title #heading{position: relative; top: 70px;}
+#title #heading h1{color: white;}
+.gnb{position: absolute; top: 0; right: 0;}
+.gnb ul{overflow: hidden;}
+.gnb ul li{float: left;}
+.gnb ul li a{display: block; padding: 5px 10px;}
+.gnb ul li:hover a{background: #000; color: #fff;}
+
+.nav ul{position: relative; left: 50%; top: 120px; float: left;}
+/* 띄우지 않으면 렐라티브가 50%가서 스크롤이 생긴다 전체를 다띄어서 50%를 옮기고 하위속성이 띄워진 상태에서 -50%를 주면 가운데로 옴 */
+.nav ul li{float: left; position: relative; left: -50%;}
+.nav ul li a{display: block; padding: 5px 40px; }
+.nav ul li a:hover{background: #000; color: #fff; }

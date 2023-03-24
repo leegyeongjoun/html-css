@@ -1,0 +1,9 @@
+body{background: #ffeead; margin: 10px;}
+
+.container{display: grid; gap: 5px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); grid-template-rows: 75px; grid-auto-flow: dense;}
+/* grid-auto-flow: dense; 빈공간 채우기 */
+
+.container>div>img{width: 100%; height: 100%; object-fit: cover;}
+.horizontal{grid-column: span 2;}
+.vertical{grid-row: span 2;}
+.big{grid-column: span 2; grid-row: span 2;}

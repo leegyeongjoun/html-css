@@ -1,0 +1,195 @@
+body {
+  background: #eee;
+}
+
+#wrap {
+  width: 1000px;
+  padding: 20px;
+  margin: 50px auto;
+}
+
+.box {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.btn1 {
+  display: block;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn2 {
+  display: block;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  background: rgb(9, 104, 221);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+.btn2:hover {
+  background: #ddd;
+}
+
+.sass {
+  color: rgb(9, 104, 221);
+}
+.sass ul {
+  background-color: red;
+  list-style: none;
+  padding: 20px;
+}
+.sass ul li {
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 5px;
+  background-color: #ddd;
+}
+.sass ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+.sass ul li a:hover {
+  color: rgb(9, 104, 221);
+}
+.sass ul li a.test {
+  font-size: 13px;
+}
+.sass ul li button {
+  border-radius: 5px;
+  border: none;
+  background: #ddd;
+  color: #fff;
+  padding: 20px;
+}
+.sass ul li:nth-child(1) {
+  border: 1px solid #fff;
+}
+
+.mixin1 button {
+  border-radius: 5px;
+  border: none;
+  background: #ddd;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.mixin2 button {
+  border-radius: 5px;
+  border: none;
+  background: #ddd;
+  color: #fff;
+  padding: 20px;
+}
+
+.mixin4 {
+  background: yellow;
+  padding: 20px;
+}
+.mixin4 ul {
+  background: red;
+}
+.mixin4 ul:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.mixin4 ul li {
+  list-style: none;
+  height: 30px;
+  float: left;
+}
+.mixin4 ul li a {
+  text-decoration: none;
+}
+
+.parameter {
+  line-height: 200%;
+}
+.parameter .parameter1 {
+  border: 2px dashed red;
+  margin-bottom: 10px;
+}
+.parameter .parameter2 {
+  border: 2px dashed rgb(9, 104, 221);
+  margin-bottom: 10px;
+}
+
+.string1 {
+  border: 1px solid #ddd;
+}
+
+.list li {
+  background: no-repeat 0 center/20px 20px;
+  line-height: 30px;
+  text-indent: 30px;
+}
+
+.list li.ico1 {
+  background-image: url(../img/ico1.svg);
+}
+.list li.ico1:hover {
+  background-image: url(../img/ico1_on.svg);
+}
+
+.list li.ico2 {
+  background-image: url(../img/ico2.svg);
+}
+.list li.ico2:hover {
+  background-image: url(../img/ico2_on.svg);
+}
+
+.list li.ico3 {
+  background-image: url(../img/ico3.svg);
+}
+.list li.ico3:hover {
+  background-image: url(../img/ico3_on.svg);
+}
+
+.list li.ico4 {
+  background-image: url(../img/ico4.svg);
+}
+.list li.ico4:hover {
+  background-image: url(../img/ico4_on.svg);
+}
+
+.list li.ico5 {
+  background-image: url(../img/ico5.svg);
+}
+.list li.ico5:hover {
+  background-image: url(../img/ico5_on.svg);
+}
+
+.ico_book {
+  background: url(../img/book.svg) no-repeat;
+  text-indent: 80px;
+}
+
+.ico_zoom {
+  background: url(../img/zoom.svg) no-repeat;
+  text-indent: 80px;
+}
+
+.ico_new {
+  background: url(../img/new.svg) no-repeat;
+  text-indent: 80px;
+}
+
+.btn {
+  padding: 0 20px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: orange;
+  color: #fff;
+  border-radius: 50px;
+}/*# sourceMappingURL=style.css.map */

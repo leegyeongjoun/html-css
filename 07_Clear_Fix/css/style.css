@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+body{width: 1000px; margin: 10px auto;}
+h1{text-align: center; margin-bottom: 30px;}
+#header{border: 10px solid #ccc; padding: 10px; margin-bottom: 10px;}
+#container{border: 10px solid #ccc; padding: 10px; margin-bottom: 10px; float: none;}
+#lnb{width: 25%; padding: 10px; border: 10px solid #000; background: red; margin-bottom: 10px; float: left;}
+#content{width: 55%; padding: 10px; border: 10px solid #000; background: red; margin-bottom: 10px; float: right;}
+/* 컨테이너에 플롯을 논 하면 플롯했을 때 lnb content 들어감 */
+#footer{border: 10px solid #ccc; padding: 10px; margin-bottom: 10px;}

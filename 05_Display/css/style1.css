@@ -1,0 +1,12 @@
+body{margin: 30px 100px;}
+/* #box span{visibility: hidden;} */
+/* visibillity보이는것 영역(형태)은 있지만 숨긴다. */
+/* #box:hover span{visibility: visible;} */
+/* 마우스를 올리면 보임 */
+/* 
+#box{opacity: 0.5;} */
+/* 투명도를 줘서 숨길 수있고 똑같이 영역이 남아있다. 
+ visibillity와의 차이점은 조절 가능하다*/
+
+#box{display: none;}
+/* display:none하면 형태조차도 없어진다. */

@@ -1,0 +1,65 @@
+/* @charset "utf-8";
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+
+.container{width: 1400px; height: inherit; margin: 0 auto; background: rgba(0,0,0,.3px);}
+
+body{font-family:'Noto Sans KR', sans-serif; }
+#wrap{}
+#header{}
+
+#nav{}
+.nav-wrap{}
+.nav-wrap > ul{}
+.nav-wrap > ul > li{}
+.nav-wrap > ul > li > a{}
+.nav-wrap > ul > li > a{}
+.nav-wrap > ul > li > a{}
+ */
+
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+.container{width: 1400px; margin: 0 auto; height: inherit;
+/* background: rgba(0,0,0,.5); */}
+
+body{font-family:  'Noto Sans KR', sans-serif;}
+#wrap{width: 100%}
+#header{width: 100%; height: 94px; border-bottom: 1px solid #ccc}
+
+
+
+.nav-wrap{width: 100%}
+.nav-wrap >ul{width: 100%}
+.nav-wrap >ul>li{float: left; width:14.285%; text-align: center;}
+/* li 각각의 넓이들을 100을 기준으로 나눈다 */
+.nav-wrap >ul>li>a{font-size: 24px; display: block; padding: 29px 0; font-weight: bold; position: relative; width: 100%}
+/* a의 위치를 기준으로 잡는다. 패딩을 주는 이유는 커서가 딱 맞게 올라가게 하기위해서 */
+.nav-wrap >ul>li>a:after{content: "";width: 1px; height: 24px; background: #ddd;position: absolute; top: 36px; right: 0}
+/* 메뉴바 옆 에 있는 선 */
+.nav-wrap >ul>li:last-child>a:after{width: 0; height: 0}
+/* 마지막 선을 안 주기 위해서 */
+.nav-wrap >ul>li>.width100{display: none; position: absolute; width: 100%; top: 94px; left: 0;  background: white; height: auto; padding: 20px 0;  border:1px solid #ccc; box-sizing: border-box; box-shadow: 0 2px 2px #c9c9c9;}
+/* 원뎁스를 눌렀을 때 떨러지는 것들  안에 패딩은 20메뉴 사이들에 패딩*/
+
+.nav-wrap >ul>li:hover>a{color: #e95a65}
+.nav-wrap >ul>li:hover>.width100{display: block;}
+.nav-wrap >ul>li>.width100>ul{width: 1400px; margin: 0 auto;}
+/* li들이 보이려면 넓이를 알맞게 줘야한다 */
+.nav-wrap >ul>li>.width100>ul>li{float: left; margin-right: 1px; width:16%}
+
+.nav-wrap >ul>li>.width100>ul>li:not(:first-child){text-align: left;}
+/* 첫번째 친구 말고 나머지 left정렬 */
+.nav-wrap >ul>li>.width100>ul>li>h2>a{font-size: 1.5em; font-size: bold; color: #e95e65;}
+.nav-wrap >ul>li>.width100>ul>li>h3{margin-bottom: 5px;}
+/* h3간의 간격*/
+.nav-wrap >ul>li>.width100>ul>li>h3>a{font-size: 1.2em; font-weight: bold; color: #097a84;}
+.nav-wrap >ul>li>.width100>ul>li>dl>dt>a{font-size: 1,2em; line-height: 180%; color: #333; font-weight: bold;}
+.nav-wrap >ul>li>.width100>ul>li>dl>dd>a{font-size: 1em; line-height: 170%; color: #777; background: url(../images/blet.png) no-repeat 0 center; padding-left: 10px;}
+.nav-wrap >ul>li>.width100>ul>li>p>a{font-size: 1,2em; line-height: 180%; color: #333;}
+
+
+
+
+

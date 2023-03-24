@@ -1,0 +1,20 @@
+body{background: #ffeead; margin: 10px;}
+
+.container{
+    display: grid; 
+    gap: 3px; 
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 40px 200px 40px; 
+    grid-template-areas: 
+    ". h h h h h h h h h h ."
+    "m c c c c c c c c c c c"
+    ". f f f f f f f f f f ."
+} 
+
+.container>div{display: flex; justify-content: center; align-items: center; font-size: 2em; color: #ffeead;}
+/* 글자 가운데 */
+.container .header{background: rgb(237, 35, 12); grid-area: h;}
+/* grid-column: 1/13; 1~13번까지 or 1/-1 끝까지*/
+.container .menu{background: rgb(233, 177, 6); grid-area: m;}
+.container .content{background: rgb(203, 232, 13); grid-area: c;}
+.container .footer{background: rgb(12, 217, 180); grid-area: f;}

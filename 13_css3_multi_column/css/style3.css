@@ -1,0 +1,39 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+
+body{padding: 2rem; margin: 0; background: #e3e7f2; line-height: 1.5; color: rgba(17,20,45,1); /* counter-reset: item; */}
+
+p{color: rgba(17,20,45,.8);}
+h1{text-transform: uppercase; font-size: 18px; margin: 2rem 0 1.5rem;}
+.post{
+    position: relative;
+    background: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: rgba(255,255,255,.1) 0 1px 1px 0 inset, rgba(50, 50, 93, .25) 0 50px 10px -20px, rgba(0,0,0,.3) 0 30px 60px -30px ;
+    counter-increment: item;
+    /* 이름을 지어줌 */
+}
+.post::before{
+    content:counter(item);
+    /* 이름일 지어준걸 호출하여 카운터함 */
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #fff;
+    background: #ff2c6d;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 80%;
+}
+.post img{width: 100%; display: block;}
+
+@media screen and (min-width: 768px) {
+    .c-multicol{column-width: 30vw; column-gap: 2rem;}
+    /* 30vw = 30% */
+    .post{break-inside: avoid;}
+    /* 컬럼 안 짜르게 */
+    
+}

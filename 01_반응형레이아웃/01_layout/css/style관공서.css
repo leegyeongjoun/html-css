@@ -1,0 +1,68 @@
+@charset "utf-8";
+@import url('../../01_layout/css/reset.css');
+/* 내가한것
+body{background: rgb(168, 236, 250);}
+#wrap{width: 1200px; height: 1400px; margin: 0 auto; background: rgb(9, 221, 179);}
+header{width: 100%; height: 100px; background: red;}
+nav{width: 100%; height: 300px; background: rgb(245, 59, 26); }
+aside{width: 20%; height: 300px; background: rgb(247, 75, 52); float: left;}
+#article{width: 80%; height: 150px; background: rgb(252, 97, 97); float: left;}
+#article1{width: 80%; height: 150px; background: rgb(249, 108, 108); float: left;}
+#article2{width: 33.333%; height: 300px; background: rgb(238, 88, 29); float: left;}
+#article3{width: 33.333%; height: 300px; background: rgb(253, 141, 42); float: left;}
+#article4{width: 33.333%; height: 300px; background: rgb(247, 75, 45); float: left;}
+#article5{width: 90%; height: 200px; padding: 5%; background: yellow; float: left;}
+#article5 ul{width: 100%; list-style: none;}
+#article5 ul li{width: 23%; height: 170px; margin: 1px; background: red; float: left; }
+footer{width: 100%; height: 100px; background: green; clear: both;}
+#article5 ul li:nth-child(4){display: block;}
+
+
+@media screen and (max-width: 1220px) {
+    #wrap{width: 100%;}
+}
+
+@media screen and (max-width: 1000px) {
+    #wrap{width: 100%;}
+
+    #article5 ul{width: 100%; list-style: none;}
+    #article5 ul li{width: 31.333%; height: 150px; }
+    #article5 ul li:nth-child(4){display: none;}
+}
+
+@media screen and (max-width: 800px) {
+    #wrap{width: 100%;}
+} */
+
+
+/* 공통속성 */
+.container{
+    width: 1400px;
+    height: inherit; /* 부모의 높이를 상속받으라는 명령 */
+    margin: 0 auto;
+    background: rgba(0, 0, 0, .5);
+}
+#header{
+    width: 100%;
+    height: 106px;
+}
+#nav{width: 100%; height: 65px; background: #2a3342;}
+
+#content{
+    width: 100%;
+    background: #fff;
+    height: auto; /* 높이는 오토 보고싶으면 임의로 잡고 본다. 1000px로 잡고 나중에 auto로 잡는다. */
+    padding-top: 40px ;
+}
+
+/* main */
+.main_con1{width: 100%; height: 368px; background: yellow;}
+.main_con2{width: 100%; height: 241px; background: rgb(51, 255, 0); margin-top: 40px;}
+.main_con3{width: 100%; height: 241px; background: rgb(118, 187, 224); margin-top: 40px;}
+.main_con4{width: 100%; height: 127px; background: rgb(119, 0, 255);}
+.warp_banner{width: 100%; height: 112px; background: green;}
+#footer{width: 100%; height: 220px; background: #4d515a;}
+
+@media screen and (max-width: 1400px){
+    .container{width: 100%;}
+}

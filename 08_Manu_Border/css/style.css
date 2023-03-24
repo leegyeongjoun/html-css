@@ -1,0 +1,13 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+
+body{margin: 0; color: #404040; font: 13px/1.5 "맑은 고딕", sans-serif; background: url(../img/banner.png) no-repeat center top/cover;}
+#menu{}
+#menu ul{list-style: none; overflow: hidden; text-align: center;}
+#menu ul li{width: 90px; float: none;}
+#menu ul li a{text-decoration: none; text-transform: uppercase; color: white; padding: 10px 10px 10px 15px; display: block; font-size: 18px; background: red; margin-bottom: 1px;}
+/* 인라인요소라 패딩 탑이 안들어가기 때문에 블럭을 넣어준다 */
+#menu ul li:hover a{border-left: 5px solid orange;
+padding-left: 10px;}
+/* padding-left를 주면 더 나온다 */
+/* 마우스를 올렸을 때 글자가 안 움직일려면 계산하여 패딩값 주는 방향에 값 15 border 5 pad left 10 */

@@ -1,0 +1,5 @@
+div{width: 200px; height: 200px; background: skyblue; margin-bottom: 20px;}
+
+.first{border: 10px solid #f00; padding: 20px;}
+/* 보더는 넓이 높이에 영향을 줌 */
+.last{border: 10px solid #f00; padding: 20px; box-sizing: border-box;}

@@ -1,0 +1,154 @@
+@charset "utf-8";
+@import url('reset.css');
+
+/* ir 컴퓨터는 읽고 화면에는 안보이게 */
+
+#sideMenu{width: 155px; background: yellow; border-bottom: 1px solid #555; position: relative;}
+.menu h1{width: 155px; height: 188px; background: url(../image/logo.png) no-repeat;}
+
+.menu > ul > li{width: 155px; height: 52px; background: url(../image/snbLeft1.png) no-repeat;}
+/* 모든 li에 공통되게 이미지로 */
+.menu > ul > li > a{display: block; width: 100%; height: 100%;}
+/* 마우스 커서를 잡기위해 높이 넓이 100프로 받아온다 */
+.menu > ul > .menu1{background-position: 0 0;}
+.menu > ul > .menu1:hover{background-position: -155px 0;}
+.menu > ul > .menu2{background-position: 0 -52px;}
+.menu > ul > .menu2:hover{background-position: -155px -52px;}
+.menu > ul > .menu3{background-position: 0 -104px;}
+.menu > ul > .menu3:hover{background-position: -155px -104px;}
+.menu > ul > .menu4{background-position: 0 -156px;}
+.menu > ul > .menu4:hover{background-position: -155px -156px;}
+.menu > ul > .menu5{background-position: 0 -208px;}
+.menu > ul > .menu5:hover{background-position: -155px -208px;}
+.menu > ul > .menu6{background-position: 0 -260px;}
+.menu > ul > .menu6:hover{background-position: -155px -260px;}
+.menu > ul > .menu7{background-position: 0 -312px;}
+.menu > ul > .menu7:hover{background-position: -155px -312px;}
+.menu > ul > .menu8{background-position: 0 -364px;}
+.menu > ul > .menu8:hover{background-position: -155px -364px;}
+.menu > ul > .menu9{background-position: 0 -416px;}
+.menu > ul > .menu9:hover{background-position: -155px -416px;}
+/* li */
+
+/* 2deps */
+#sideMenu .menu > ul > li > .sub{position: absolute; left: 155px; width: 126px; top: 0; background: white; height: 100vh;  visibility: hidden;}
+/* 2deps 통일되는 설정값 */
+/* 이미지가 130이지만 중간에 뭐가있어서 126 */
+#sideMenu .menu > ul > li:hover > .sub{position: absolute; left: 155px; width: 126px; top: 0; background: white; height: 100vh;  visibility: visible;}
+/* li에게 마우스를 옮기면 sub이 나온다 */
+#sideMenu .menu > ul > li:hover > .sub{visibility: visible;} 
+#sideMenu .menu > ul > .menu1 > .sub li{visibility: visible;}
+/* 첫번째 이미지를 계속 띄우고싶어서 */
+
+
+.menu > ul > .menu1 > .sub > li{background: url(../image/snbLeft1A.png) no-repeat;}
+.menu > ul > .menu2 > .sub > li{background: url(../image/snbLeft2A.png) no-repeat;}
+.menu > ul > .menu3 > .sub > li{background: url(../image/snbLeft3A.png) no-repeat;}
+.menu > ul > .menu4 > .sub > li{background: url(../image/snbLeft4A.png) no-repeat;}
+.menu > ul > .menu5 > .sub > li{background: url(../image/snbLeft5A.png) no-repeat;}
+.menu > ul > .menu6 > .sub > li{background: url(../image/snbLeft6A.png) no-repeat;}
+.menu > ul > .menu7 > .sub > li{background: url(../image/snbLeft7A.png) no-repeat;}
+.menu > ul > .menu8 > .sub > li{background: url(../image/snbLeft8A.png) no-repeat;}
+.menu > ul > .menu9 > .sub > li{background: url(../image/snbLeft9A.png) no-repeat;}
+
+.menu > ul > li > .sub > li{width: 100%; height: 115px;}
+/* 이미지들의 크기와 높이 */
+.menu > ul > li > .sub > li > a{display: block; width: 100%; height: 100%;}
+
+/* 126과 134 4만큼 더 옮기고 흰색바탕을을 초록색, 파랑색으로 */
+.menu > ul > .menu1 > .sub > .sub11{background-position: 0 0;}
+.menu > ul > .menu1 > .sub > .sub11:hover{background-position: -134px 0;}
+.menu > ul > .menu1 > .sub > .sub12{background-position: 0 -115px;}
+.menu > ul > .menu1 > .sub > .sub12:hover{background-position: -134px -115px;}
+.menu > ul > .menu1 > .sub > .sub13{background-position: 0 -230px;}
+.menu > ul > .menu1 > .sub > .sub13:hover{background-position: -134px -230px;}
+.menu > ul > .menu1 > .sub > .sub14{background-position: 0 -345px;}
+.menu > ul > .menu1 > .sub > .sub14:hover{background-position: -134px -345px;}
+.menu > ul > .menu1 > .sub > .sub15{background-position: 0 -460px;}
+.menu > ul > .menu1 > .sub > .sub15:hover{background-position: -134px -460px;}
+.menu > ul > .menu1 > .sub > .sub16{background-position: 0 -575px;}
+.menu > ul > .menu1 > .sub > .sub16:hover{background-position: -134px -575px;}
+.menu > ul > .menu1 > .sub > .sub17{background-position: 0 -690px;}
+.menu > ul > .menu1 > .sub > .sub17:hover{background-position: -134px -690px;}
+
+.menu > ul > .menu2 > .sub > .sub21{background-position: 0 0;}
+.menu > ul > .menu2 > .sub > .sub21:hover{background-position: -134px 0;}
+.menu > ul > .menu2 > .sub > .sub22{background-position: 0 -115px;}
+.menu > ul > .menu2 > .sub > .sub22:hover{background-position: -134px -115px;}
+.menu > ul > .menu2 > .sub > .sub23{background-position: 0 -230px;}
+.menu > ul > .menu2 > .sub > .sub23:hover{background-position: -134px -230px;}
+
+
+.menu > ul > .menu3 > .sub > .sub31{background-position: 0 0;}
+.menu > ul > .menu3 > .sub > .sub31:hover{background-position: -134px 0;}
+.menu > ul > .menu3 > .sub > .sub32{background-position: 0 -115px;}
+.menu > ul > .menu3 > .sub > .sub32:hover{background-position: -134px -115px;}
+.menu > ul > .menu3 > .sub > .sub33{background-position: 0 -230px;}
+.menu > ul > .menu3 > .sub > .sub33:hover{background-position: -134px -230px;}
+.menu > ul > .menu3 > .sub > .sub34{background-position: 0 -345px;}
+.menu > ul > .menu3 > .sub > .sub34:hover{background-position: -134px -345px;}
+.menu > ul > .menu3 > .sub > .sub35{background-position: 0 -460px;}
+.menu > ul > .menu3 > .sub > .sub35:hover{background-position: -134px -460px;}
+.menu > ul > .menu3 > .sub > .sub36{background-position: 0 -115px;}
+.menu > ul > .menu3 > .sub > .sub36:hover{background-position: -134px -115px;}
+
+.menu > ul > .menu4 > .sub > .sub41{background-position: 0 0;}
+.menu > ul > .menu4 > .sub > .sub41:hover{background-position: -134px 0;}
+.menu > ul > .menu4 > .sub > .sub42{background-position: 0 -115px;}
+.menu > ul > .menu4 > .sub > .sub42:hover{background-position: -134px -115px;}
+.menu > ul > .menu4 > .sub > .sub43{background-position: 0 -230px;}
+.menu > ul > .menu4 > .sub > .sub43:hover{background-position: -134px -230px;}
+.menu > ul > .menu4 > .sub > .sub44{background-position: 0 -345px;}
+.menu > ul > .menu4 > .sub > .sub44:hover{background-position: -134px -345px;}
+.menu > ul > .menu4 > .sub > .sub45{background-position: 0 -460px;}
+.menu > ul > .menu4 > .sub > .sub45:hover{background-position: -134px -460px;}
+.menu > ul > .menu4 > .sub > .sub46{background-position: 0 -115px;}
+.menu > ul > .menu4 > .sub > .sub46:hover{background-position: -134px -115px;}
+
+.menu > ul > .menu5 > .sub > .sub51{background-position: 0 0;}
+.menu > ul > .menu5 > .sub > .sub51:hover{background-position: -134px 0;}
+.menu > ul > .menu5 > .sub > .sub52{background-position: 0 -115px;}
+.menu > ul > .menu5 > .sub > .sub52:hover{background-position: -134px -115px;}
+.menu > ul > .menu5 > .sub > .sub53{background-position: 0 -230px;}
+.menu > ul > .menu5 > .sub > .sub53:hover{background-position: -134px -230px;}
+.menu > ul > .menu5 > .sub > .sub54{background-position: 0 -345px;}
+.menu > ul > .menu5 > .sub > .sub54:hover{background-position: -134px -345px;}
+
+.menu > ul > .menu6 > .sub > .sub61{background-position: 0 0;}
+.menu > ul > .menu6 > .sub > .sub61:hover{background-position: -134px 0;}
+.menu > ul > .menu6 > .sub > .sub62{background-position: 0 -115px;}
+.menu > ul > .menu6 > .sub > .sub62:hover{background-position: -134px -115px;}
+.menu > ul > .menu6 > .sub > .sub63{background-position: 0 -230px;}
+.menu > ul > .menu6 > .sub > .sub63:hover{background-position: -134px -230px;}
+
+.menu > ul > .menu7 > .sub > .sub71{background-position: 0 0;}
+.menu > ul > .menu7 > .sub > .sub71:hover{background-position: -134px 0;}
+.menu > ul > .menu7 > .sub > .sub72{background-position: 0 -115px;}
+.menu > ul > .menu7 > .sub > .sub72:hover{background-position: -134px -115px;}
+.menu > ul > .menu7 > .sub > .sub73{background-position: 0 -230px;}
+.menu > ul > .menu7 > .sub > .sub73:hover{background-position: -134px -230px;}
+.menu > ul > .menu7 > .sub > .sub74{background-position: 0 -345px;}
+.menu > ul > .menu7 > .sub > .sub74:hover{background-position: -134px -345px;}
+.menu > ul > .menu7 > .sub > .sub75{background-position: 0 -460px;}
+.menu > ul > .menu7 > .sub > .sub75:hover{background-position: -134px -460px;}
+
+.menu > ul > .menu8 > .sub > .sub81{background-position: 0 0;}
+.menu > ul > .menu8 > .sub > .sub81:hover{background-position: -134px 0;}
+.menu > ul > .menu8 > .sub > .sub82{background-position: 0 -115px;}
+.menu > ul > .menu8 > .sub > .sub82:hover{background-position: -134px -115px;}
+.menu > ul > .menu8 > .sub > .sub83{background-position: 0 -230px;}
+.menu > ul > .menu8 > .sub > .sub83:hover{background-position: -134px -230px;}
+.menu > ul > .menu8 > .sub > .sub84{background-position: 0 -345px;}
+.menu > ul > .menu8 > .sub > .sub84:hover{background-position: -134px -345px;}
+
+.menu > ul > .menu9 > .sub > .sub91{background-position: 0 0;}
+.menu > ul > .menu9 > .sub > .sub91:hover{background-position: -134px 0;}
+.menu > ul > .menu9 > .sub > .sub92{background-position: 0 -115px;}
+.menu > ul > .menu9 > .sub > .sub92:hover{background-position: -134px -115px;}
+.menu > ul > .menu9 > .sub > .sub93{background-position: 0 -230px;}
+.menu > ul > .menu9 > .sub > .sub93:hover{background-position: -134px -230px;}
+
+.menu  .menu-phone{width: 100%; height: 176px; background: url(../image/tel.png) no-repeat;}
+.menu >  .menu-familysite{width: 100%; height: 27px; background: url(../image/family.jpg) 0px -27px;}
+.menu >  .menu-familysite:hover{background-position: 0 0;}
+/* 위치를 0 -27에서 마우스를 올리면 0 0 으로 바꾼다 */

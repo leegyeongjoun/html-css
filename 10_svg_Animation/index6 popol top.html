@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg name</title>
+    <style>
+        svg{width: 432px; position: absolute; left: 50%; transform: translateX(-50%);}
+        svg text{font-size: 50px; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; fill: rgba(0,0,0,.1); stroke-width: 2px; stroke: skyblue; stroke-dasharray: 221; stroke-dashoffset: 221; animation: ani 1s linear infinite;}
+        @keyframes ani{
+            100%{stroke-dashoffset: 0; fill: salmon;}
+            0%{stroke-dashoffset: 221; }
+        }
+    </style>
+</head>
+<body>
+    <svg>
+        <text x="0" y="85">LeeGyoengJoun</text>
+    </svg>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+body{line-height: 1.5;}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+    /* column-count: 3; */
+    /* column-width: 20rem; */
+    columns: 3;
+}
+/* 20rem보다 공간이 없으면 떨어짐 */
+/* 3칸을 가지고싶고 20rem을 가지려하기때문에 스크롤 생김 media로  */
+blockquote{font-weight: bold;}
+blockquote cite{font-weight: normal;}
+img{max-width: 100%;}
+
+@media screen and (min-height: 400px) {
+    .container{
+        /* column-count: 3; */
+        /* column-width: 20rem; */
+        columns: 3;
+        column-rule: 1px dashed red;
+        column-gap: 40px;
+    }
+}

@@ -1,0 +1,22 @@
+@charset "utf-8";
+:root{font-size: 12px;}
+*{margin: 0; padding: 0;}
+html{height: 100%;}
+body{font-size: 20px; height: 100%;}
+.wrap{font-size: 10px;}
+.box{float: left; background: blue; counter-reset: #fff;
+text-align: center; margin-right: 20px;}
+.clearfix::after{content: ""; display: block; clear: both;}
+.box_px{width: 160px; height: 160px;}
+/* 그냥 고정 */
+.box_em{width: 10em; height: 10em;}
+/* em은 바로위에 또는 그 위에를 따라감 부모기준 */
+.box_rem{width: 10rem; height: 10rem;}
+/* 문서의 기본값 root기준 */
+p{width: 100vw; height: 100%;  background: pink; font-size: 1.7rem;}
+/* 화면의 끝까지 가게하는것
+100%하면 안되고 바디가 높이값을 안가지고 있기 때문에 바디의 부모 html까지 줘야한다.
+100vh하면 기준에서 부터 끝까지 */
+span{font-size: .9em;}
+/* body에 20px .8em은 16px이다 */
+

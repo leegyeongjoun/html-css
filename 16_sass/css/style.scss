@@ -1,0 +1,218 @@
+@charset "utf-8";
+body{padding: 50px; background: #eee;}
+.wrap{width: 1000px; margin: 0 auto; background: white; padding: 20px 50px;}
+
+// 1.변수(영문, 영문+숫자, 영문-, _소문자)
+$gray: #666;
+$_white: #fff;
+$blue: rgb(17, 79, 238);
+$red:rgb(237, 11, 11);
+$fs24:24px;
+$fs20:20px;
+
+.btn1{
+    display: block; 
+    width: 200px; 
+    height: 50px; 
+    line-height: 50px; 
+    font-size: $fs24; 
+    color: $gray; 
+    background: $_white; 
+    border: 1px solid $gray; 
+    text-align: center; 
+    margin-bottom: 5px; 
+    &:hover{background: $gray; color: $_white;}
+    // 마우스를 올릴려면 
+}
+
+.btn2{
+    display: block;
+    padding: 10px;
+    font-size: $fs20;
+    border: 1px solid $red;
+    background: $blue;
+    &:hover{background: $red;}
+}
+
+// 2. 선택자(자식선택자, 종속선택자)
+.sass{color: $red;
+    ul{border: 1px solid $red; padding: 5px 10px; list-style: none;
+        li{background: pink; margin-bottom: 5px;
+            a{text-decoration: none; 
+              &:hover{color: $red;}
+              &.test2{font-size: 12px;}
+             //a에게 .test2라는 이름이 또 있다는 것  
+            }
+            .test2{text-decoration: underline;
+
+            }
+            &:last-child{border: 1px solid $blue;}
+        }   
+    }
+}
+
+// 3.mixin, include 는 @사용 
+@mixin test{
+    // 이름지어준것 계속해서 쓸 것들을 컴포넌트와 시켜서 부른다.
+    width: 100px;
+    height: 100px;
+    border: 1px solid $red;
+    box-shadow: 2px 2px 2px #222;
+    margin-bottom: 20px;
+}
+@mixin first {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: yellow;
+}
+.test{
+    @include test();
+}
+.first{
+    @include first();
+}
+@mixin clear{
+    &::after{content: ""; display: block; clear: both;}
+}
+.cleaerfix{
+    @include clear();
+    border: 1px solid $blue;
+    padding: 0 20px;
+    p{float: left; margin-right: 50px; @include test();}
+}
+
+//4-1. 매개변수 괄호안에 들어감 변수는 정의를하고쓰고 매개변수는 매번 바꿀 수있음
+@mixin border($color){
+    border: 1px solid $color;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.var{@include border(blue)}
+.red{@include border(red)}
+.green{@include border(green)}
+
+//4-2. 매개변수 여러개
+
+@mixin box($w, $h) {
+    width: $w;
+    height: $h;
+}
+
+.var2{
+    @include box(300px, 100px);
+    background: yellow;
+    line-height: 100px;
+    text-align: center;
+    color: $red;
+    margin-bottom: 5px;
+}
+.var3{
+    @include box(200px, 200px);
+    background: yellowgreen;
+    line-height: 200px;
+    text-align: center;
+    color: $_white;
+}
+
+//5. 문자보관
+
+$bx:string1;
+// 대입
+div.#{$bx} {border:1px solid yellowgreen; padding: 10px; margin-bottom: 5px;};
+// .쓰고 불르기 변수로 쓰려면 #{$--}
+@mixin bx1($position, $wid, $color1) {
+    border-#{$position} : $wid solid $color1;
+}
+.string2{
+    @include bx1(bottom, 2px, pink);
+    margin-bottom: 5px;
+    padding: 10px;
+}
+.string3{
+    @include bx1(left, 2px, green);
+    @include bx1(right, 2px, green);
+    @include bx1(bottom, 2px, green);
+    margin-bottom: 4px;
+    padding: 10px;
+}
+
+//6. 반복문 for
+.list{margin-top: 10px;
+    li{
+        background: no-repeat 0 center/20px 20px; text-indent: 30px; line-height: 30px;
+    /*  &.ico1{background-image: url(../img/ico1.svg);}
+        &.ico2{background-image: url(../img/ico2.svg);}
+        &.ico3{background-image: url(../img/ico3.svg);}
+        &.ico4{background-image: url(../img/ico4.svg);}
+        &.ico5{background-image: url(../img/ico5.svg);} */
+    }
+}
+@for $i from 1 to 6 {
+    .list li.ico#{$i}{background-image: url(../img/ico#{$i}.svg);}
+    .list li:nth-child(#{$i})::before{
+        content: "내가 최고 #{$i} ";    
+    }
+    .list li:hover.ico#{$i}{background-image: url(../img/ico#{$i}_on.svg);}
+    .list li:hover:nth-child(#{$i})::before{
+        content: "scss #{$i} ";    
+    }
+}
+
+//7. each문
+// var안에 book과 zoom new가 들어간다
+@each $var in book, zoom, new {
+    .ico_#{$var}{
+        background: url(../img/#{$var}.svg) no-repeat 0 center / 20px 20px;
+        text-indent: 30px;
+    }
+}
+$heading:(
+    h1:10px,
+    h2:18px,
+    h3:12px
+);
+@each $ele, $fs in $heading {
+    #{$ele}{
+        font-size: $fs;
+    }
+}
+
+//8. 조건문 if()
+@mixin btn_radius($h, $radius:true) {
+    padding: 5px 20px;
+    height: $h;
+    line-height: $h;
+    text-decoration: none;
+    text-align: center;
+    background: black;
+    color: #fff;
+    @if $radius{
+        border-radius: $h/2;
+    }@else{
+        border: 1px solid $red;
+    }
+}
+.btn{@include btn_radius(30px, true)}
+
+@mixin position($x, $y, $z) {
+    position: absolute;
+    left: $x;
+    top: $y;
+    z-index: $z;
+    @if $x==50% and $y==50% {
+        transform: translate(-50%, -50%);
+    }@else if $x==50%{
+        transform: translateX(-50%);
+    }@else if $y==50%{
+        transform: translateY(-50%);
+    }
+}
+.if{
+    width: 300px; 
+    height: 300px; 
+    background: yellowgreen;
+    @include position(null, 50%, 2)
+    // 값 넣지 않는것 null
+}
+

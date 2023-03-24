@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import url(./reset.css);
+
+
+#wrap{width: 1440px; height: 1100px; background: blue; margin: 0 auto;}
+#header{width: 100%; height: 100px; background: red;}
+#aside{width: 30%; height: 900px; background: green; float: left;}
+#article1{width: 70%; height: 300px; background: orange; float: left;}
+#article2{width: 70%; height: 300px; background: yellow; float: left;}
+#article3{width: 70%; height: 300px; background: purple; float: left;}
+#footer{width: 100%; height: 100px; background: rgb(52, 80, 128); overflow: hidden;}
+/* footer에 float:left;가능 */
+/* 태그 설정을 잘 해야한다 */
+
+@media screen and (max-width:1440px){
+    #wrap{width:100%; height: auto; overflow: hidden;}
+   
+    #article1{height: 450px;}
+    #article2{height: 450px;}
+    #article3{width: 100%; }
+}

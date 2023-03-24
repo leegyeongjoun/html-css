@@ -1,0 +1,31 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+
+
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+body{margin:50px}
+#nav{width: 100%; height: 50px; background: rgb(68, 54, 220);}
+/* >를 쓰지않으면 모든 ul이 선택 됨 */
+#nav>ul{width: 1440px; margin: 0 auto; background: skyblue;  border-radius: 5px; }
+#nav>ul::after{content: ""; display: block; clear: both; }
+/* 패딩값을 주면 a에게 영향을 끼치기 때문에 쓰면안됨 */
+#nav>ul>li{float: left; width: 170px; margin: 0 5px; text-align: center; }
+/* 확인하려면 백그라운드 색 relative줘도 되지만 불편함*/
+#nav>ul>li>a{font-weight: bold; padding: 15px 10px 10px 10px; display: block;
+border-radius: 3px; }
+#nav>ul>li:hover>a{ color: white; }
+
+/* ul과 a는 형제이기때문에 
+2deps */
+#nav>ul>li>ul{display: none; position: absolute; width: 170px; background: rgb(238, 246, 164); transition: .3s;}
+/* 포지션 앱솔루트를 안주면 원뎁스에 영향을줌 */
+/* 마우스가 계속 붙어있어서 2deps가 같이 보이려면 padding으로 채워줘야함 
+   또한 밑에 내용이 밀리기 때문에*/
+#nav>ul>li:hover>ul{display: block;}
+/* 넓이를 같이 차지하다가 자기 자리에서 뜸 넓이는 li의 픽셀단위 그대로 줘야함 */
+#nav>ul>li>ul li{}
+#nav>ul>li>ul li a{display: block; padding: 10px; }
+#nav>ul>li>ul li:hover a{background: pink; color: red; }
+#container{width: 100%; height: 500px; background: yellow;}
+/* 2deps 메뉴들 이쁘게 떨어지는것 */

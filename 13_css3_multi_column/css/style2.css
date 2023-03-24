@@ -1,0 +1,8 @@
+@charset "utf-8";
+
+.masonry{list-style: none; padding: 0; margin: 3rem auto; width: 80%; columns: 15rem; column-gap: 40px;}
+.masonry li{margin-bottom: 5rem; break-inside: avoid;}
+/* 그림을 피해서 들어오개 */
+.masonry li img{max-width: 100%;}
+.masonry li h3{}
+.masonry li p{}

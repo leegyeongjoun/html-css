@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+body{width: 1000px; margin: 10px auto;}
+h1{text-align: center; margin-bottom: 30px;}
+#header{border: 10px solid #ccc; padding: 10px; margin-bottom: 10px;}
+#container{border: 10px solid #ccc; padding: 10px; margin-bottom: 10px; float: left;}
+#lnb{width: 25%; padding: 10px; border: 10px solid #000; background: red; margin-bottom: 10px; float: left;}
+#content{width: 55%; padding: 10px; border: 10px solid #000; background: red; margin-bottom: 10px; float: right;}
+/* 컨테이너에 플롯을 같이 띄우고 푸터에 클리어 both
+ 부모가 자식을 담지만 컨텐츠 양만큼 넓이가 줄어버린다. */
+#footer{border: 10px solid #ccc; padding: 10px; margin-bottom: 10px; clear: both;}

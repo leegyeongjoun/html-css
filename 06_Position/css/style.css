@@ -1,0 +1,17 @@
+.box{width: 100px; height: 100px; position: absolute;}
+/* 앱솔루트 시키면 1번 2번 다 떠서 3번만 남는다 */
+/* relative 시키면 띄우긴하지만 똑같이 나온다 */
+
+.box:nth-child(1){background: red; top: 10px; left: 10px; z-index: 1;}
+.box:nth-child(2){background: greenyellow; top: 50px; left: 50px; z-index: 0;}
+.box:nth-child(3){background: blueviolet; top: 150px; left: 90px; z-index: 2;}
+/* 플롯레프르는 곂칠수는 없지만 포지션 속성들은 곂칠 수있다. 
+z index 사용가능 -값을 주면 글자보다도 밑에 깔린다. */
+body>div{width: 400px; height: 200px; border: 3px solid black; position: relative;
+overflow-y: scroll;}
+/* 부모가 있어서 relative를 쓴다면 기준이 부모가되고 넘치게 된다면 overflow:scroll */
+
+
+/* margin-top: -75px; margin-right: -171px; 넓이에 마진을 -로 준다 */
+/* 넓이 높이를 모를때는 transform: translate(x축-50%, y축-50%)
+   오른쪽 일때는 (x축50%, y축-50%) */

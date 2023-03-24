@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+body{line-height: 1.5;}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+    /* column-count: 3; */
+    /* column-width: 20rem; */
+    columns: 3;
+}
+/* 20rem보다 공간이 없으면 떨어짐 */
+/* 3칸을 가지고싶고 20rem을 가지려하기때문에 스크롤 생김 media로  */
+blockquote{font-weight: bold;}
+blockquote cite{font-weight: normal;}
+img{max-width: 100%;}
+figure{
+    /* column-span: all; */
+    /* 이미지를 한줄로 만듬 */
+    break-inside: avoid;
+    /* 글자를 피해서 이미지 들어오게 */
+}
+h3{break-before: column;}
+/* column을 h3기준으로 만들기 */

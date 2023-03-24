@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>SVG line Animation</title>
+</head>
+<body>
+    <svg width="600" height="200" viewBox="0 0 600 200" version="1.1">
+        <line stroke-dasharray="200" stroke-dashoffset="0" x1="0" y1="20" x2="600" y2="20" />
+        <!-- array를 주면 200 공간도 200 -->
+        <line stroke-dasharray="200" stroke-dashoffset="50" x1="0" y1="40" x2="600" y2="40" />
+        <!-- 50뺀만큼 간다 -->
+        <line stroke-dasharray="200" stroke-dashoffset="100" x1="0" y1="60" x2="600" y2="60" />
+        <line stroke-dasharray="200" stroke-dashoffset="200" x1="0" y1="80" x2="600" y2="80" />
+        <line stroke-dasharray="100,200" stroke-dashoffset="0" x1="0" y1="100" x2="600" y2="100" />
+        <line class="line1" stroke-dasharray="10,15" stroke-dashoffset="600" x1="0" y1="120" x2="600" y2="120" />
+        <line stroke-dasharray="20,5" stroke-dashoffset="0" x1="0" y1="140" x2="600" y2="140" />
+        <line class="line" stroke-dasharray="600" stroke-dashoffset="600" x1="0" y1="160" x2="600" y2="160" />
+        
+        <style>
+            line{stroke: red; stroke-width: 2;}
+            .line{animation:dash 2s linear infinite;}
+            @keyframes dash {
+                from{stroke-dashoffset:600}
+                to{stroke-dashoffset:0}
+            }
+            .line1{animation: dash1 5s linear infinite;}
+            @keyframes dash1{
+                form{stroke-dashoffset:600}
+                to{stroke-dashoffset:0}
+            }
+        </style>
+    </svg>
+</body>
+</html>

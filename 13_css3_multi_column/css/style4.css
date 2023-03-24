@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* *{box-sizing: border-box;}
+body{background: black; counter-reset: item;}
+.post{background: white; color: black; padding: 15px 0; margin-bottom: 15px; text-align: center; position: relative; }
+.post:before{content: counter(item); background: red; width: 30px; height: 30px; counter-increment: item; position: absolute; top: 0; left: 0; line-height: 30px; color: white;} */
+*{box-sizing: border-box;}
+body{padding: 2rem; margin: 0; line-height: 1.5; color: #1e1f26; background: #1e1f26;}
+
+.grid-item{margin-bottom: 1rem; background: white; display: flex; align-items: center; justify-content: center; border-radius: 3px; text-align: center; position: relative; counter-increment: a; padding: 20px;}
+
+.grid-item::before{content: counter(a); position: absolute; top: 0; left: 0; background: green; color: white; width: 1.5rem; height: 1.5rem; line-height: 1.5rem;}

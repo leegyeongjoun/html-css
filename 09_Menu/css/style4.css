@@ -1,0 +1,53 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+ul{list-style: none;}
+a{text-decoration: none; color: #333;}
+.cf::after{content: ""; display: block; clear: both;}
+
+/* #header{width: 100%; margin: 50px auto;}
+#header #nav{width: 1440px; height: 70px;  margin: 50px auto;}
+#header #nav>ul{}
+#header #nav>ul>li{float: left; width: 150px; margin:1px 50px; text-align: center; }
+#header #nav>ul>li>a{display: block; text-align: center; padding: 3px 15px 10px 5px; text-align: center; color: skyblue; font-weight: bold;}
+#header #nav>ul>li:hover>a{color: blue;}
+
+/* 기준 */
+/* #header #nav>ul>li>ul{position: relative; display: none;}
+#header #nav>ul>li:hover>ul{position: relative; display: block;}
+#header #nav>ul>li>.sub1{background: rgb(14, 233, 245); top: 0px; left: 30px; width: 320px;}
+#header #nav>ul>li>.sub2{top내리고 left마이너스값background: rgb(14, 233, 245); top: 5px; left: 30px; width: 300px;}
+#header #nav>ul>li>.sub3{background: rgb(14, 233, 245); top: 5px; left: 30px; width: 540px;}
+#header #nav>ul>li>.sub4{background: rgb(14, 233, 245); top: 5px; left: 30px; width: 510px;}
+#header #nav>ul>li>.sub5{background: rgb(14, 233, 245); top: 5px; left: 30px; width: 450px;}
+#header #nav>ul>li>ul>li{float: left;}
+#header #nav>ul>li>ul>li>a{display: block; color: white; padding: 10px 5px;} */
+
+
+
+
+
+/* 가운데 맞추고 넓이주는 거까지 */
+#header{width: 100%; margin: 50px auto;}
+#header #nav{width: 800px; height: 40px; position: relative; top: 50px; margin: 0 auto; }
+#header #nav>ul{}
+#header #nav>ul>li{float: left; position: relative; padding: 5px 10px; font-weight: bold;}
+/* left를 주면 한번에 움직이기 때문에 글자 사이사이 간격을 조절하려면 패딩을 줘야힌다 */
+#header #nav>ul>li>a{display: block; font-size: 1.2em; padding: 7px 10px; text-shadow: 1px 1px 1px #ddd;}
+/* A에게 bottom 패딩을 주면 2deps와 영향이 생김 */
+#header #nav>ul>li:hover>a{color: blue;}
+/* li에 호버를 주는 이유는 2deps를 선택해도 글자색이 바뀌지 않는다 */
+
+
+#header #nav>ul>li>ul{display: none; position:absolute;}
+#header #nav>ul>li:hover>ul{display: block; background: skyblue;}
+#header #nav>ul>li>.sub1{width: 380px;}
+#header #nav>ul>li>.sub2{width: 340px;}
+#header #nav>ul>li>.sub3{width: 600px; left: -240px;}
+#header #nav>ul>li>.sub4{width: 580px; left: -320px;}
+#header #nav>ul>li>.sub5{width: 510px; left: -400px;}
+#header #nav>ul>li>ul>li{float: left; }
+/* 글자사이의 넓이 */
+#header #nav>ul>li>ul>li>a{display: block; padding: 3px 10px;}
+#header #nav>ul>li>ul>li>a:hover{color: blue;}
+

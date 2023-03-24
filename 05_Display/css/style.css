@@ -1,0 +1,7 @@
+#box{display: inline; background: red; width: 500px;  height: 50px;}
+#box span{background: yellow; width: 500px; padding: 50px 20px 30px 20px; display: block; height: 500px;}
+/* 인라인요소들은 바로 옆으로 붙는다 none*/
+/* 스판은 인라인 요소지만 블럭화하면 강제로 줄바꿈 */
+/* 원래스판은 패딩이 들어감 */
+/* 인라인을 시키면 인라인 옆으로 들어감 넓이도 안들어감 인라인 일 때는 padding-top 안먹힘 높이도 안먹힘 margin top bottom도 안먹힘 */
+/* 박스안에 인라인 친구들을 블럭으로 바꾸면 줄바꿈 넓이 높이 패딩 다 됨 */

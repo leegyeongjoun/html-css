@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg circle Animation</title>
+    <style>
+        #page{width: 150px; height: 150px; margin: 100px 500px; background: yellow;}
+        #page circle{stroke-width: 3px;/* 두께 */  fill: none; stroke-linecap: round;/* 원안에색깔 */ animation: loader 4s linear infinite ; transform-origin: 50%;/*  가운데에서 움직이게 하려면 */}
+        #page circle:nth-child(1){ stroke: blue; /* 원안에색깔 */ stroke-dasharray: 55; animation-delay: .4s; }
+        #page circle:nth-child(2){ stroke: rgb(0, 187, 255); stroke-dasharray: 130; /* 원안에색깔 */ animation-delay: -.2s;}
+        #page circle:nth-child(3){ stroke: rgb(255, 0, 111); /* 원안에색깔 */stroke-dasharray: 180; animation-delay: .9s;}
+        #page circle:nth-child(4){ stroke: rgb(255, 170, 0); /* 원안에색깔 */ stroke-dasharray: 300; animation-delay: -.8s;}
+        @keyframes loader{
+            0%{transform: rotate(0deg);}
+            50%{transform: rotate(360deg);}
+            100%{transform: rotate(0deg);}
+        }
+    </style>
+</head>
+<body>
+    <svg id="page">
+        <circle cx="75" cy="75" r="10" />
+        <circle cx="75" cy="75" r="30" />
+        <circle cx="75" cy="75" r="50" />
+        <circle cx="75" cy="75" r="70" />
+        <!-- 두께값을 빼줘야 75에서 제대로된 원이 나온다 -->
+    </svg>
+</body>
+</html>

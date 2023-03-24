@@ -1,0 +1,71 @@
+@charset "utf-8";
+@import url('reset.css');
+
+
+.container{width: 1440px; height: inherit; margin: 0 auto; background: rgba(0, 0, 0, .3);}
+/* 레이아웃 */
+#wrap{width: 100%;}
+#header{width: 100%; height: 105px; background: rgba(255, 255, 255, .8); position: fixed; top: 0; left: 0; z-index: 999;}
+#main{width: 100%;}
+#banner{text-align: center;}
+#contents{width: 100%; height: 500px; background: yellow;}
+#footer{width: 100%; height: 200px; background: black;}
+
+
+/* 헤더영역 */
+h1{width: 282px; float: left; margin-top: 20px;}
+
+#nav{width: 800px; float: left; margin-left: 100px; margin-top: 30px; background: red;}
+/* 메뉴의 전체적인 틀을 옮긴다 */
+
+
+#nav .bg{width: 100%; height: 0; background: rgb(55, 139, 230); 
+position: absolute; top: 105px; left: 0; transition: .3s; z-index: 1;}
+/* 100%를 줘야 꽉차고 top에서 105만큼 떨어지고 left 0을해야 넓이가 찬다 */
+#nav:hover .bg{width: 100%; height: 240px; background: rgb(55, 139, 230); position: absolute; top: 105px; left: 0; transition: .3s;}
+
+#nav .bg span{display: block; width: 1440px; height: 0; background: url(../img/gnb_blind_bg.png) no-repeat 150px bottom; margin: 0 auto; transition: .3s;}
+#nav:hover .bg span{ height: 240px;}
+/* 물결모양 */
+
+
+#nav .menu > ul > li{float: left; margin-right: 6px; background: yellow;}
+#nav .menu > ul > li:last-child{margin-right: 0px;}
+/* 각각 li들을 조금씩 띄운다 */
+#nav .menu > ul > li > a{font-size: 25px; font-weight: bold; display: block; padding: 5px 30px 32px;}
+/* top right bottom left */
+/* a커서위치  메뉴의 위치를 옮기려면 a와 li로 패딩과 마진을 줘서 옮긴다*/ 
+#nav .menu > ul > li:nth-child(1) > a{color: red;} 
+#nav .menu > ul > li:nth-child(2) > a{color: orange;} 
+#nav .menu > ul > li:nth-child(3) > a{color: yellow;} 
+#nav .menu > ul > li:nth-child(4) > a{color: green;} 
+#nav .menu > ul > li:nth-child(5) > a{color: blue;} 
+
+
+/* 2deps */
+#nav .menu > ul > li > ul{position: absolute; z-index: 2; width: 160px; height: 0px; overflow: hidden; padding: 0 0 0 20px ; transition: .3s;}
+/* z인덱스가 2가돼야지 bg위에 글자가 만들어진다. */
+/* 글자를 올리기 위하여 뒤 배경에 딱 맞추기위해*/
+#nav .menu > ul:hover > li > ul{height: 240px;}
+/* 1deps에 마우스 올리면 높이가 넓어져서 내려짐  */
+#nav .menu > ul > li:hover > ul{ background: rgba(255, 255, 255, .8);}
+/* li에 백그라운드들이 채워짐 */
+#nav .menu > ul > li:nth-child(3) > ul{width: 120px;}
+/* 3번째 친구가 3글자여서 넓이를 줄여줌 */
+#nav .menu > ul > li > ul > li{height: 30px; line-height: 30px;}
+/* 2deps 메뉴들의 사이를 넓힘 */
+#nav .menu > ul > li > ul > li > a{display: block; padding: 20px 0; font-size: 14px;}
+/* ul과 li사이 넓이를넓힘 */
+.search{width: auto; height: 32px; background: #0b8dda; border-radius: 18px; padding: 2px 50px; float: right; margin-top: 34px;  position: relative;}
+
+.search-img a{display: block; width: 100%; height: 100%;}
+
+.search-img a span{display: block; width: 21px; height: 21px; background: url(../img/totalsearch_ico.png) no-repeat; position: absolute; right: 10px; top: 8px}
+/* 이미지가 들어가지 않아서 span을 a태그에 */
+
+/* 떠있는 상태에서 내릴 수 있다 */
+
+
+
+#banner img{vertical-align: bottom; width: 100%;}
+/* 이미지 공백을 안남기기 위해 */

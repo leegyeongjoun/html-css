@@ -1,0 +1,17 @@
+body{background: #ffeead; margin: 10px;}
+
+.container{
+    display: grid; 
+    gap: 3px; 
+} 
+.container1{border: 5px solid #ddd; display: grid; gap: 5px; grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); grid-template-rows: 100px 100px;}
+.container2{border: 5px solid #ddd;  display: grid; gap: 5px; grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); grid-template-rows: repeat(2, 100px)}
+/* auto-fill은 px을 그대로 들고온다 */
+
+.container>div{display: flex; justify-content: center; align-items: center; font-size: 2em; color: #ffeead;}
+/* 글자 가운데 */
+.container div:nth-child(1){background: rgb(243, 34, 6);}
+.container div:nth-child(2){background: rgb(243, 180, 6);}
+.container div:nth-child(3){background: rgb(239, 243, 6);}
+.container div:nth-child(4){background: rgb(18, 243, 6);}
+

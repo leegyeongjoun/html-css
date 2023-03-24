@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 패딩채우기</title>
+    <style>
+        .container{width: 500px; border: 10px solid #0f0;}
+        /* img{display: block;} */
+        img{vertical-align: bottom;}
+        /* 여백이 생긴다 이미지는 인라인요소라 글자취급을 한다. 
+        글자는 기본적으로 line-height가 들어있다.
+        1.display:block
+        2.vertical-align:bottom 이미지가 꼭 인라인요소여야할라면 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://via.placeholder.com/500x350/f00/fff" alt="">
+    </div>
+    <p>
+        image요소는 inline요소입니다. 다시 말해 image요소는 텍스트 취급<br>
+        브라우저 요소 내의 텍스트를 랜더링 할 때 나름의 방식이 있는데 이를 이해하려면 타이포그래피에대해 어느정도 알아야 합니다.
+    </p>
+    <ul>
+        <li>첫번째, image요소를 블록요소로 전환하면 더 이상 텍스트취급하지 않는다</li>
+        <li>두번째, inline요소에 사용할 수 있는 vertical-align: bottom; 프로퍼티를 사용하는 방법
+            <br>
+            vertical-align 프로퍼티의 기본값은 baseline인데 이것을 bottom을 위치 조정하면된다.
+        </li>
+    </ul>
+</body>
+</html>
